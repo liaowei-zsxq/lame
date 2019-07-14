@@ -3,14 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 42;
+	objectVersion = 45;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73F6497022DB53950038A161 /* xmm_quantize_sub.c in Sources */ = {isa = PBXBuildFile; fileRef = 73F6496B22DB53950038A161 /* xmm_quantize_sub.c */; };
+		73F6497222DB53950038A161 /* lame_intrin.h in Headers */ = {isa = PBXBuildFile; fileRef = 73F6496D22DB53950038A161 /* lame_intrin.h */; };
+		73F6497422DB53950038A161 /* lameerror.h in Headers */ = {isa = PBXBuildFile; fileRef = 73F6496F22DB53950038A161 /* lameerror.h */; };
 		8D07F2BE0486CC7A007CD1D0 /* LAME_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 32BAE0B70371A74B00C91783 /* LAME_Prefix.pch */; };
 		8D07F2C00486CC7A007CD1D0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
-		EA0A6AD40BB84E38003C87B1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0A6AC20BB84D93003C87B1 /* Cocoa.framework */; };
-		EA498C8D0DE5E37B00250F0E /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = EA498C8C0DE5E37B00250F0E /* config.h */; };
 		EA8CC08809A39A49001379B8 /* lame.h in Headers */ = {isa = PBXBuildFile; fileRef = EA8CC08709A39A49001379B8 /* lame.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA8CC0A509A39A55001379B8 /* common.c in Sources */ = {isa = PBXBuildFile; fileRef = EA8CC08A09A39A55001379B8 /* common.c */; };
 		EA8CC0A609A39A55001379B8 /* common.h in Headers */ = {isa = PBXBuildFile; fileRef = EA8CC08B09A39A55001379B8 /* common.h */; };
@@ -77,10 +78,11 @@
 /* Begin PBXFileReference section */
 		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		32BAE0B70371A74B00C91783 /* LAME_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAME_Prefix.pch; sourceTree = "<group>"; };
+		73F6496B22DB53950038A161 /* xmm_quantize_sub.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = xmm_quantize_sub.c; sourceTree = "<group>"; };
+		73F6496D22DB53950038A161 /* lame_intrin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lame_intrin.h; sourceTree = "<group>"; };
+		73F6496F22DB53950038A161 /* lameerror.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lameerror.h; sourceTree = "<group>"; };
 		8D07F2C70486CC7A007CD1D0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D07F2C80486CC7A007CD1D0 /* LAME.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LAME.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA0A6AC20BB84D93003C87B1 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
-		EA498C8C0DE5E37B00250F0E /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		EA8CC08709A39A49001379B8 /* lame.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = lame.h; path = ../include/lame.h; sourceTree = "<group>"; };
 		EA8CC08A09A39A55001379B8 /* common.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = common.c; sourceTree = "<group>"; };
 		EA8CC08B09A39A55001379B8 /* common.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
@@ -149,7 +151,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA0A6AD40BB84E38003C87B1 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,18 +170,9 @@
 			children = (
 				08FB77ACFE841707C02AAC07 /* Source */,
 				089C1665FE841158C02AAC07 /* Resources */,
-				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
 				034768DDFF38A45A11DB9C8B /* Products */,
 			);
 			name = LAME;
-			sourceTree = "<group>";
-		};
-		0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */ = {
-			isa = PBXGroup;
-			children = (
-				EA0A6AC20BB84D93003C87B1 /* Cocoa.framework */,
-			);
-			name = "External Frameworks and Libraries";
 			sourceTree = "<group>";
 		};
 		089C1665FE841158C02AAC07 /* Resources */ = {
@@ -197,11 +189,19 @@
 			children = (
 				32BAE0B70371A74B00C91783 /* LAME_Prefix.pch */,
 				EA8CC08709A39A49001379B8 /* lame.h */,
-				EA498C8C0DE5E37B00250F0E /* config.h */,
 				EA8CC0C009A39A5E001379B8 /* libmp3lame */,
 				EA8CC08909A39A55001379B8 /* mpglib */,
 			);
 			name = Source;
+			sourceTree = "<group>";
+		};
+		73F6496A22DB53950038A161 /* vector */ = {
+			isa = PBXGroup;
+			children = (
+				73F6496B22DB53950038A161 /* xmm_quantize_sub.c */,
+				73F6496D22DB53950038A161 /* lame_intrin.h */,
+			);
+			path = vector;
 			sourceTree = "<group>";
 		};
 		EA8CC08909A39A55001379B8 /* mpglib */ = {
@@ -246,9 +246,10 @@
 				EA8CC0D509A39A5E001379B8 /* id3tag.c */,
 				EA8CC0D609A39A5E001379B8 /* id3tag.h */,
 				EA8CC0D709A39A5E001379B8 /* l3side.h */,
+				EA8CC0DA09A39A5E001379B8 /* lame_global_flags.h */,
 				EA8CC0D809A39A5E001379B8 /* lame-analysis.h */,
 				EA8CC0D909A39A5E001379B8 /* lame.c */,
-				EA8CC0DA09A39A5E001379B8 /* lame_global_flags.h */,
+				73F6496F22DB53950038A161 /* lameerror.h */,
 				EA8CC0DD09A39A5E001379B8 /* machine.h */,
 				EA8CC0E009A39A5E001379B8 /* mpglib_interface.c */,
 				EA8CC0E109A39A5E001379B8 /* newmdct.c */,
@@ -256,10 +257,10 @@
 				EA8CC0E309A39A5E001379B8 /* presets.c */,
 				EA8CC0E409A39A5E001379B8 /* psymodel.c */,
 				EA8CC0E509A39A5E001379B8 /* psymodel.h */,
-				EA8CC0E609A39A5E001379B8 /* quantize.c */,
-				EA8CC0E709A39A5E001379B8 /* quantize.h */,
 				EA8CC0E809A39A5E001379B8 /* quantize_pvt.c */,
 				EA8CC0E909A39A5E001379B8 /* quantize_pvt.h */,
+				EA8CC0E609A39A5E001379B8 /* quantize.c */,
+				EA8CC0E709A39A5E001379B8 /* quantize.h */,
 				EA8CC0EA09A39A5E001379B8 /* reservoir.c */,
 				EA8CC0EB09A39A5E001379B8 /* reservoir.h */,
 				EA8CC0EC09A39A5E001379B8 /* set_get.c */,
@@ -273,6 +274,7 @@
 				EA8CC0F409A39A5E001379B8 /* vbrquantize.h */,
 				EA8CC0F509A39A5E001379B8 /* VbrTag.c */,
 				EA8CC0F609A39A5E001379B8 /* VbrTag.h */,
+				73F6496A22DB53950038A161 /* vector */,
 				EA8CC0F709A39A5E001379B8 /* version.c */,
 				EA8CC0F809A39A5E001379B8 /* version.h */,
 			);
@@ -310,18 +312,19 @@
 				EA8CC10F09A39A5E001379B8 /* lame-analysis.h in Headers */,
 				EA8CC11109A39A5E001379B8 /* lame_global_flags.h in Headers */,
 				EA8CC11409A39A5E001379B8 /* machine.h in Headers */,
+				73F6497222DB53950038A161 /* lame_intrin.h in Headers */,
 				EA8CC11909A39A5E001379B8 /* newmdct.h in Headers */,
 				EA8CC11C09A39A5E001379B8 /* psymodel.h in Headers */,
 				EA8CC11E09A39A5E001379B8 /* quantize.h in Headers */,
 				EA8CC12009A39A5E001379B8 /* quantize_pvt.h in Headers */,
 				EA8CC12209A39A5E001379B8 /* reservoir.h in Headers */,
 				EA8CC12409A39A5E001379B8 /* set_get.h in Headers */,
+				73F6497422DB53950038A161 /* lameerror.h in Headers */,
 				EA8CC12609A39A5E001379B8 /* tables.h in Headers */,
 				EA8CC12909A39A5E001379B8 /* util.h in Headers */,
 				EA8CC12B09A39A5E001379B8 /* vbrquantize.h in Headers */,
 				EA8CC12D09A39A5E001379B8 /* VbrTag.h in Headers */,
 				EA8CC12F09A39A5E001379B8 /* version.h in Headers */,
-				EA498C8D0DE5E37B00250F0E /* config.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,9 +355,17 @@
 /* Begin PBXProject section */
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+			};
 			buildConfigurationList = 4FADC24608B4156D00ABE55E /* Build configuration list for PBXProject "LAME" */;
 			compatibilityVersion = "Xcode 2.4";
+			developmentRegion = en;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+				English,
+			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* LAME */;
 			productRefGroup = 034768DDFF38A45A11DB9C8B /* Products */;
 			projectDirPath = "";
@@ -382,6 +393,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA8CC0A509A39A55001379B8 /* common.c in Sources */,
+				73F6497022DB53950038A161 /* xmm_quantize_sub.c in Sources */,
 				EA8CC0A709A39A55001379B8 /* dct64_i386.c in Sources */,
 				EA8CC0A909A39A55001379B8 /* decode_i386.c in Sources */,
 				EA8CC0AD09A39A55001379B8 /* interface.c in Sources */,
@@ -429,20 +441,21 @@
 		4FADC24308B4156D00ABE55E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				COPY_PHASE_STRIP = NO;
+				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = LAME_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@executable_path/../Frameworks/";
 				LIBRARY_STYLE = DYNAMIC;
-				MACH_O_TYPE = mh_dylib;
+				MACH_O_TYPE = staticlib;
+				PRODUCT_BUNDLE_IDENTIFIER = net.sourceforge.LAMEframework;
 				PRODUCT_NAME = LAME;
 				WRAPPER_EXTENSION = framework;
 				ZERO_LINK = NO;
@@ -452,10 +465,8 @@
 		4FADC24408B4156D00ABE55E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
@@ -463,10 +474,10 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = LAME_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@executable_path/../Frameworks/";
 				LIBRARY_STYLE = DYNAMIC;
-				MACH_O_TYPE = mh_dylib;
+				MACH_O_TYPE = staticlib;
+				PRODUCT_BUNDLE_IDENTIFIER = net.sourceforge.LAMEframework;
 				PRODUCT_NAME = LAME;
 				WRAPPER_EXTENSION = framework;
 				ZERO_LINK = NO;
@@ -476,20 +487,110 @@
 		4FADC24708B4156D00ABE55E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"ARCHS[sdk=appletvos*]" = arm64;
+				"ARCHS[sdk=appletvsimulator*]" = x86_64;
+				"ARCHS[sdk=iphoneos*]" = (
+					arm64,
+					armv7,
+				);
+				"ARCHS[sdk=iphonesimulator*]" = x86_64;
+				"ARCHS[sdk=macosx*]" = x86_64;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				PREBINDING = NO;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvsimulator appletvos macosx";
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VALID_ARCHS = "";
+				"VALID_ARCHS[sdk=appletvos*]" = arm64;
+				"VALID_ARCHS[sdk=appletvsimulator*]" = x86_64;
+				"VALID_ARCHS[sdk=iphoneos*]" = "arm64e arm64 armv7s armv7";
+				"VALID_ARCHS[sdk=iphonesimulator*]" = x86_64;
+				"VALID_ARCHS[sdk=macosx*]" = x86_64;
 			};
 			name = Debug;
 		};
 		4FADC24808B4156D00ABE55E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"ARCHS[sdk=appletvos*]" = arm64;
+				"ARCHS[sdk=appletvsimulator*]" = x86_64;
+				"ARCHS[sdk=iphoneos*]" = (
+					arm64,
+					armv7,
+				);
+				"ARCHS[sdk=iphonesimulator*]" = x86_64;
+				"ARCHS[sdk=macosx*]" = x86_64;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				PREBINDING = NO;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvsimulator appletvos macosx";
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VALID_ARCHS = "";
+				"VALID_ARCHS[sdk=appletvos*]" = arm64;
+				"VALID_ARCHS[sdk=appletvsimulator*]" = x86_64;
+				"VALID_ARCHS[sdk=iphoneos*]" = "arm64e arm64 armv7s armv7";
+				"VALID_ARCHS[sdk=iphonesimulator*]" = x86_64;
+				"VALID_ARCHS[sdk=macosx*]" = x86_64;
 			};
 			name = Release;
 		};
