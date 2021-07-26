@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 42;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -488,14 +488,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				"ARCHS[sdk=appletvos*]" = arm64;
-				"ARCHS[sdk=appletvsimulator*]" = x86_64;
-				"ARCHS[sdk=iphoneos*]" = (
-					arm64,
-					armv7,
-				);
-				"ARCHS[sdk=iphonesimulator*]" = x86_64;
-				"ARCHS[sdk=macosx*]" = x86_64;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -531,12 +523,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvsimulator appletvos macosx";
 				TVOS_DEPLOYMENT_TARGET = 9.0;
-				VALID_ARCHS = "";
-				"VALID_ARCHS[sdk=appletvos*]" = arm64;
-				"VALID_ARCHS[sdk=appletvsimulator*]" = x86_64;
-				"VALID_ARCHS[sdk=iphoneos*]" = "arm64e arm64 armv7s armv7";
-				"VALID_ARCHS[sdk=iphonesimulator*]" = x86_64;
-				"VALID_ARCHS[sdk=macosx*]" = x86_64;
 			};
 			name = Debug;
 		};
@@ -544,14 +530,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				"ARCHS[sdk=appletvos*]" = arm64;
-				"ARCHS[sdk=appletvsimulator*]" = x86_64;
-				"ARCHS[sdk=iphoneos*]" = (
-					arm64,
-					armv7,
-				);
-				"ARCHS[sdk=iphonesimulator*]" = x86_64;
-				"ARCHS[sdk=macosx*]" = x86_64;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -585,12 +563,6 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvsimulator appletvos macosx";
 				TVOS_DEPLOYMENT_TARGET = 9.0;
-				VALID_ARCHS = "";
-				"VALID_ARCHS[sdk=appletvos*]" = arm64;
-				"VALID_ARCHS[sdk=appletvsimulator*]" = x86_64;
-				"VALID_ARCHS[sdk=iphoneos*]" = "arm64e arm64 armv7s armv7";
-				"VALID_ARCHS[sdk=iphonesimulator*]" = x86_64;
-				"VALID_ARCHS[sdk=macosx*]" = x86_64;
 			};
 			name = Release;
 		};
